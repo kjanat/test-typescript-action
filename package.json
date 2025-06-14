@@ -2,7 +2,7 @@
   "name": "typescript-action",
   "description": "GitHub Actions TypeScript template",
   "version": "0.0.0",
-  "author": "",
+  "author": "kjanat",
   "type": "module",
   "private": true,
   "homepage": "https://github.com/actions/typescript-action",
@@ -23,17 +23,17 @@
     "node": ">=20"
   },
   "scripts": {
-    "bundle": "npm run format:write && npm run package",
-    "ci-test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 npx jest",
-    "coverage": "npx make-coverage-badge --output-path ./badges/coverage.svg",
-    "format:write": "npx prettier --write .",
-    "format:check": "npx prettier --check .",
-    "lint": "npx eslint .",
-    "local-action": "npx @github/local-action . src/main.ts .env",
-    "package": "npx rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
-    "package:watch": "npm run package -- --watch",
-    "test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 npx jest",
-    "all": "npm run format:write && npm run lint && npm run test && npm run coverage && npm run package"
+    "bundle": "pnpm run format:write && pnpm run package",
+    "ci-test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 pnpm jest",
+    "coverage": "pnpm dlx make-coverage-badge --output-path ./badges/coverage.svg",
+    "format:write": "pnpm dlx prettier --write .",
+    "format:check": "pnpm dlx prettier --check .",
+    "lint": "pnpm dlx eslint .",
+    "local-action": "pnpm dlx @github/local-action . src/main.ts .env",
+    "package": "pnpm dlx rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript",
+    "package:watch": "pnpm run package -- --watch",
+    "test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 pnpm dlx jest",
+    "all": "pnpm run format:write && pnpm run lint && pnpm run test && pnpm run coverage && pnpm run package"
   },
   "license": "MIT",
   "dependencies": {

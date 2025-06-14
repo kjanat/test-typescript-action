@@ -1,0 +1,3 @@
+configDependencies:
+  '@pnpm/types-fixer': 0.1.0+sha512-h8iYCPyf0FrMH/pyu3EYryOaGUEI8NsQxsCcdp+XO9sYqUr9jw3ARTEv0Ifl4WHhoLhdxud2zwto1Y9WuOT3QA==
+pnpmfile: node_modules/.pnpm-config/@pnpm/types-fixer/pnpmfile.cjs
