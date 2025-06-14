@@ -198,7 +198,8 @@ steps:
 ```
 
 For example workflow runs, check out the
-[Actions tab](https://github.com/kjanat/test-typescript-action/actions)! :rocket:
+[Actions tab](https://github.com/kjanat/test-typescript-action/actions)!
+:rocket:
 
 ## Usage
 
