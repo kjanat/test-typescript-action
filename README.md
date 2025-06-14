@@ -321,7 +321,7 @@ pnpm test
 
 ## Publishing
 
-Actions are run from GitHub repos so we will checkin the packed dist folder.  
+Actions are run from GitHub repos so we will checkin the packed dist folder.
 
 Then run [ncc](https://github.com/zeit/ncc) and push the results:
 
@@ -331,9 +331,13 @@ pnpm run all
 
 ### Using with Dev Container
 
-Note that this template includes a [dev container](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers). You can develop in the container which already has all the tools and libraries installed.
+Note that this template includes a
+[dev container](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers).
+You can develop in the container which already has all the tools and libraries
+installed.
 
-You can test your action in the dev container using [@github/local-action](https://github.com/github/local-action).
+You can test your action in the dev container using
+[@github/local-action](https://github.com/github/local-action).
 
 ```shell
 # pnpm @github/local action <action-yaml-path> <entrypoint> <dotenv-file>
