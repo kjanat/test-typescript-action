@@ -1,9 +1,9 @@
 # Create a GitHub Action Using TypeScript
 
-[![GitHub Super-Linter](https://github.com/actions/typescript-action/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
-![CI](https://github.com/actions/typescript-action/actions/workflows/ci.yml/badge.svg)
-[![Check dist/](https://github.com/actions/typescript-action/actions/workflows/check-dist.yml/badge.svg)](https://github.com/actions/typescript-action/actions/workflows/check-dist.yml)
-[![CodeQL](https://github.com/actions/typescript-action/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/actions/typescript-action/actions/workflows/codeql-analysis.yml)
+[![GitHub Super-Linter](https://github.com/kjanat/test-typescript-action/actions/workflows/linter.yml/badge.svg)](https://github.com/super-linter/super-linter)
+![CI](https://github.com/kjanat/test-typescript-action/actions/workflows/ci.yml/badge.svg)
+[![Check dist/](https://github.com/kjanat/test-typescript-action/actions/workflows/check-dist.yml/badge.svg)](https://github.com/kjanat/test-typescript-action/actions/workflows/check-dist.yml)
+[![CodeQL](https://github.com/kjanat/test-typescript-action/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/kjanat/test-typescript-action/actions/workflows/codeql-analysis.yml)
 [![Coverage](./badges/coverage.svg)](./badges/coverage.svg)
 
 Use this template to bootstrap the creation of a TypeScript action. :rocket:
@@ -84,7 +84,8 @@ contents of this directory with your own code.
 There are a few things to keep in mind when writing your action code:
 
 - Most GitHub Actions toolkit and CI/CD operations are processed asynchronously.
-  In `main.ts`, you will see that the action is run in an `async` function.
+  In [`main.ts`](src/main.ts), you will see that the action is run in an `async`
+  function.
 
   ```javascript
   import * as core from '@actions/core'
@@ -110,8 +111,8 @@ So, what are you waiting for? Go ahead and start customizing your action!
    git checkout -b releases/v1
    ```
 
-1. Replace the contents of `src/` with your action code
-1. Add tests to `__tests__/` for your source code
+1. Replace the contents of [`src/`](./src/) with your action code
+1. Add tests to [`__tests__/`](./__tests__/) for your source code
 1. Format, test, and build the action
 
    ```bash
@@ -165,7 +166,7 @@ So, what are you waiting for? Go ahead and start customizing your action!
    ```
 
 1. Create a pull request and get feedback on your action
-1. Merge the pull request into the `main` branch
+1. Merge the pull request into the `master` branch
 
 Your action is now published! :rocket:
 
@@ -197,7 +198,7 @@ steps:
 ```
 
 For example workflow runs, check out the
-[Actions tab](https://github.com/actions/typescript-action/actions)! :rocket:
+[Actions tab](https://github.com/kjanat/test-typescript-action/actions)! :rocket:
 
 ## Usage
 
@@ -218,7 +219,7 @@ steps:
 
   - name: Test Local Action
     id: test-action
-    uses: actions/typescript-action@v1 # Commit with the `v1` tag
+    uses: kjanat/test-typescript-action@v1 # Commit with the `v1` tag
     with:
       milliseconds: 1000
 
@@ -268,18 +269,18 @@ enable the workflow, follow the below steps.
    ```yaml
    # pull_request:
    #   branches:
-   #     - main
+   #     - master
    # push:
    #   branches:
-   #     - main
+   #     - master
    ```
 
 1. Save and commit the changes
 
 Once complete, this workflow will run any time a pull request is created or
-changes pushed directly to `main`. If the workflow detects any dependencies with
-missing or non-compliant licenses, it will fail the workflow and provide details
-on the issue(s) found.
+changes pushed directly to `master`. If the workflow detects any dependencies
+with missing or non-compliant licenses, it will fail the workflow and provide
+details on the issue(s) found.
 
 ### Updating Licenses
 
